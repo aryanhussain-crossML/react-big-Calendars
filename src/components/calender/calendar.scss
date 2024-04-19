@@ -1,0 +1,99 @@
+@import "react-big-calendar/lib/sass/styles";
+@import "react-big-calendar/lib/addons/dragAndDrop/styles"; // if using DnD
+
+// $event-indicator-color: (
+//   event.shift === "rest" ? "#ddd":
+//     (event.shift === "day" ? "#157570": "#5e2e43")
+// )
+$event-indicator-opacity: 1;
+
+@mixin event-styles($backgroundColor, $opacity) {
+  background-color: $backgroundColor;
+  opacity: $opacity;
+}
+
+#firstCalendar {
+  .dateWrapper {
+    width: 60%;
+    margin: 0 auto;
+    padding: 2rem;
+
+    .reactBigCalender {
+      .rbc-toolbar {
+        position: relative;
+        span.rbc-btn-group {
+          > :first-child {
+            display: none;
+          }
+
+          > :nth-child(2) {
+            position: absolute;
+            left: 40.33%;
+            top: -20%;
+            border: 0;
+            // content: ">";
+          }
+          > :nth-child(3) {
+            position: absolute;
+            right: 40.33%;
+            top: -20%;
+            border: 0;
+          }
+        }
+        span:nth-child(3) {
+          display: none;
+        }
+      }
+
+      .rbc-month-header {
+        border-bottom: 2px solid #ddd;
+        .rbc-header {
+          padding: 1rem !important;
+          border-bottom: 0;
+          text-transform: uppercase;
+        }
+
+        .rbc-header + .rbc-header {
+          border: 0;
+        }
+      }
+
+      .rbc-month-row {
+        .rbc-day-bg.rbc-off-range-bg {
+          background-color: #fff;
+        }
+
+        .rbc-row-content {
+          .rbc-row {
+            .rbc-row-segment {
+              position: relative;
+
+              button {
+                display: none;
+              }
+
+              .rbc-event {
+                padding: 0.5rem;
+                &::before {
+                  content: "";
+                  height: 98%;
+                  width: 6px;
+                  border-radius: 24px 0 0 24px;
+                  position: absolute;
+                  // background-color: var(--event-indicator-color);
+                  left: 1px;
+                  top: 0;
+                  @include event-styles(
+                    var(--event-indicator-color),
+                    $event-indicator-opacity
+                  );
+                  mix-blend-mode: color-burn;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

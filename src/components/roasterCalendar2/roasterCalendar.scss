@@ -1,0 +1,182 @@
+@import "react-big-calendar/lib/sass/styles";
+@import "react-big-calendar/lib/addons/dragAndDrop/styles"; // if using DnD
+
+// $event-indicator-color: (
+//   event.shift === "rest" ? "#ddd":
+//     (event.shift === "day" ? "#157570": "#5e2e43")
+// )
+$event-indicator-opacity: 1;
+
+@mixin event-styles($backgroundColor, $opacity) {
+  background-color: $backgroundColor;
+  opacity: $opacity;
+}
+#roasterCalendar2 {
+  .dateWrapper {
+    width: 70%;
+    margin: 0 auto;
+    padding: 2rem;
+
+    .reactBigCalender {
+      &.top {
+        flex-basis: calc(100% - 154px);
+        .rbc-month-view {
+          .rbc-month-row {
+            padding-top: 0;
+            justify-content: center;
+
+            .rbc-row-content {
+              .rbc-date-cell {
+                button {
+                  font-weight: 800;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .rbc-toolbar {
+        position: relative;
+        span.rbc-btn-group {
+          > :first-child {
+            display: none;
+          }
+
+          > :nth-child(2) {
+            position: absolute;
+            left: 40.33%;
+            top: -20%;
+            border: 0;
+            // content: ">";
+          }
+          > :nth-child(3) {
+            position: absolute;
+            right: 40.33%;
+            top: -20%;
+            border: 0;
+          }
+        }
+        span:nth-child(3) {
+          display: none;
+        }
+      }
+
+      &.lowerRow {
+        flex: 1;
+        .rbc-toolbar {
+          display: none;
+        }
+
+        .rbc-month-view {
+          border: 0;
+
+          .rbc-month-row {
+            border-left: 1px solid #ddd;
+
+            border-top: 0;
+          }
+        }
+
+        .rbc-row-content {
+          .rbc-row {
+            .rbc-date-cell {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .rbc-month-view {
+        flex-direction: row;
+        // border: 0;
+        flex: initial;
+        height: 50px;
+      }
+
+      .rbc-month-header {
+        display: none;
+        // border-bottom: 1px solid #ddd;
+        .rbc-header {
+          padding: 1rem !important;
+          border-bottom: 0;
+          text-transform: uppercase;
+        }
+
+        .rbc-header + .rbc-header {
+          border: 0;
+        }
+      }
+
+      .rbc-month-row {
+        // align-items: center;
+        // justify-content: center;
+        padding-top: 6px;
+        .rbc-row-bg {
+          .rbc-day-bg {
+            border: 0 !important;
+            background-color: #fff;
+          }
+        }
+        .rbc-day-bg.rbc-off-range-bg {
+          background-color: #fff;
+        }
+
+        .rbc-row-content {
+          .rbc-row {
+            .rbc-row-segment {
+              position: relative;
+
+              button {
+                display: none;
+              }
+
+              .rbc-event {
+                padding: 0.5rem;
+                &::before {
+                  content: "";
+                  height: 98%;
+                  width: 6px;
+                  border-radius: 24px 0 0 24px;
+                  position: absolute;
+                  // background-color: var(--event-indicator-color);
+                  left: 1px;
+                  top: 0;
+                  @include event-styles(
+                    var(--event-indicator-color),
+                    $event-indicator-opacity
+                  );
+                  mix-blend-mode: color-burn;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .lower {
+      .MuiAccordionSummary-content.css-1betqn-MuiAccordionSummary-content {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation0.MuiAccordion-root.css-1n6sapf-MuiPaper-root-MuiAccordion-root {
+        .MuiButtonBase-root.MuiAccordionSummary-root {
+          padding-right: 0;
+        }
+      }
+
+      .MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation0.MuiAccordion-root.Mui-expanded.css-1n6sapf-MuiPaper-root-MuiAccordion-root {
+        .MuiAccordionDetails-root.css-ta84vm-MuiAccordionDetails-root {
+          padding: 0 0 0 16px;
+
+          .MuiBox-root.css-rvp98e{
+            p.MuiTypography-root.MuiTypography-body1.css-ahj2mt-MuiTypography-root{
+              padding: 0 11px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

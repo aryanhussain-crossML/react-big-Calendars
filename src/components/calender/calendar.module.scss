@@ -1,0 +1,49 @@
+.dateWrapper {
+  .Calendar {
+  }
+
+  .helperBar {
+    margin: 2rem 0;
+    span {
+      margin-right: 4rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    span.rest {
+      &::before {
+        content: "";
+        top: 2px;
+        width: 15px;
+        height: 15px;
+        background-color: #ddd;
+        position: absolute;
+        left: -20px;
+      }
+    }
+
+    span.day {
+      &::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        background-color: #157570;
+        position: absolute;
+        top: 2px;
+        left: -20px;
+      }
+    }
+
+    span.night {
+      &::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        background-color: #5e2e43;
+        position: absolute;
+        top: 2px;
+        left: -20px;
+      }
+    }
+  }
+}
