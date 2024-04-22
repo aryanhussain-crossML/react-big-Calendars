@@ -1,0 +1,25 @@
+#customToobar {
+
+  .MuiDateCalendar-root.css-1rtg91x-MuiDateCalendar-root{
+    height: auto;
+  }
+  .MuiDayCalendar-header.css-i5q14k-MuiDayCalendar-header {
+    display: none !important;
+  }
+  .MuiPickersSlideTransition-root.MuiDayCalendar-slideTransition.css-1t0788u-MuiPickersSlideTransition-root-MuiDayCalendar-slideTransition{
+    display: none;
+  }
+  .MuiPickersCalendarHeader-root.css-1aqny2q-MuiPickersCalendarHeader-root{
+    position: relative;
+    margin-left: 35px;
+
+    .MuiPickersCalendarHeader-labelContainer.css-cyfsxc-MuiPickersCalendarHeader-labelContainer{
+      margin-right: 0;
+    }
+
+    button.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-edgeEnd.MuiIconButton-sizeMedium.MuiPickersArrowSwitcher-button.css-kg9q0s-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button{
+      position: absolute;
+      left: -35px;
+    }
+  }
+}

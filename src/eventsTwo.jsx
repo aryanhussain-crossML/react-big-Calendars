@@ -9,6 +9,50 @@ export default [
     start: new Date(2015, 2, 29),
     end: new Date(2015, 3, 3),
     shift: "rest",
+    subRoasters: [
+      // ----------------------
+
+      {
+        id: 789,
+        title: "Rest Day",
+        start: new Date(2015, 2, 29),
+        end: new Date(2015, 3, 3),
+        shift: "rest",
+      },
+      {
+        id: 1,
+        title: "Rest Day",
+        start: new Date(2015, 3, 7),
+        end: new Date(2015, 3, 15),
+        shift: "rest",
+      },
+
+      // --------
+      {
+        id: 11,
+        title: "Day Shift",
+        start: new Date(2015, 3, 15, 8, 0, 0),
+        end: new Date(2015, 3, 19, 8, 30, 0),
+        shift: "day",
+      },
+
+      // ----------------
+      {
+        id: 12.5,
+        title: "Night Shift",
+        start: new Date(2015, 3, 23, 22, 30, 0),
+        end: new Date(2015, 3, 29, 24, 30, 0),
+        shift: "night",
+      },
+      // -----------
+      {
+        id: 13,
+        title: "Rest Day",
+        start: new Date(2015, 3, 20, 19, 30, 0),
+        end: new Date(2015, 3, 22, 2, 0, 0),
+        shift: "rest",
+      },
+    ],
   },
   {
     id: 1,
@@ -16,6 +60,50 @@ export default [
     start: new Date(2015, 3, 7),
     end: new Date(2015, 3, 15),
     shift: "rest",
+    subRoasters: [
+      // ----------------------
+
+      {
+        id: 789,
+        title: "Rest Day",
+        start: new Date(2015, 2, 29),
+        end: new Date(2015, 3, 3),
+        shift: "rest",
+      },
+      {
+        id: 1,
+        title: "Rest Day",
+        start: new Date(2015, 3, 7),
+        end: new Date(2015, 3, 15),
+        shift: "rest",
+      },
+
+      // --------
+      {
+        id: 11,
+        title: "Day Shift",
+        start: new Date(2015, 3, 15, 8, 0, 0),
+        end: new Date(2015, 3, 19, 8, 30, 0),
+        shift: "day",
+      },
+
+      // ----------------
+      {
+        id: 12.5,
+        title: "Night Shift",
+        start: new Date(2015, 3, 23, 22, 30, 0),
+        end: new Date(2015, 3, 29, 24, 30, 0),
+        shift: "night",
+      },
+      // -----------
+      {
+        id: 13,
+        title: "Rest Day",
+        start: new Date(2015, 3, 20, 19, 30, 0),
+        end: new Date(2015, 3, 22, 2, 0, 0),
+        shift: "rest",
+      },
+    ],
   },
 
   // --------
@@ -25,6 +113,7 @@ export default [
     start: new Date(2015, 3, 15, 8, 0, 0),
     end: new Date(2015, 3, 19, 8, 30, 0),
     shift: "day",
+    subRoasters: [],
   },
 
   // ----------------
@@ -34,6 +123,7 @@ export default [
     start: new Date(2015, 3, 23, 22, 30, 0),
     end: new Date(2015, 3, 29, 24, 30, 0),
     shift: "night",
+    subRoasters: [],
   },
   // -----------
   {
@@ -42,6 +132,7 @@ export default [
     start: new Date(2015, 3, 20, 19, 30, 0),
     end: new Date(2015, 3, 22, 2, 0, 0),
     shift: "rest",
+    subRoasters: [],
   },
 ];
 

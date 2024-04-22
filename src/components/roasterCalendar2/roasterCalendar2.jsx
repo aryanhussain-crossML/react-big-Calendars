@@ -12,6 +12,8 @@ import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/material";
 import eventsTwo, { sndCal } from "../../eventsTwo";
+import CustomToolbar from "../customToolbar/customToolbar";
+
 
 const localizer = dayjsLocalizer(dayjs);
 
@@ -125,7 +127,7 @@ const RoasterCalendar2 = () => {
       },
     };
   };
-  
+
   const backButton = document.querySelector(
     ".reactBigCalender .rbc-toolbar .rbc-btn-group button:nth-child(2)"
   );
@@ -159,6 +161,9 @@ const RoasterCalendar2 = () => {
                   className={`${styles.Calendar} reactBigCalender top`}
                   defaultDate={defaultDate}
                   localizer={localizer}
+                  components={{
+                    toolbar: CustomToolbar,
+                  }}
                 />
               </Box>
 
